@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import { ContactListItem, ContactListItemDelete } from './ContactCard.styled';
 
-export const ContactCard = ({ name, number, onDelete }) => {
+export const ContactCard = ({ name, phone, onDelete }) => {
   return (
     <ContactListItem>
-      {name}: {number}
+      {name}: {phone}
       <ContactListItemDelete onClick={onDelete}>Delete</ContactListItemDelete>
     </ContactListItem>
   );
@@ -12,6 +12,6 @@ export const ContactCard = ({ name, number, onDelete }) => {
 
 ContactCard.propTypes = {
   name: PropTypes.string.isRequired,
-  number: PropTypes.string.isRequired,
+  phone: PropTypes.string.isRequired,
   onDelete: PropTypes.func.isRequired,
 };
